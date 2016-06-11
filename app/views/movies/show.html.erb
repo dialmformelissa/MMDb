@@ -1,9 +1,15 @@
 <h1><%= @movie.title %></h1>
 
+<ul>
+  <% @movie.formats.each do |format| %>
+    <li><%= format.name %></li>
+  <% end %>
+</ul>
+
 <p>
   <%= link_to 'edit', edit_movie_path(@movie) %>
 </p>
 
 <p>
-  <%= link_to "Back to all the movies", movies_path(@movie) %>
+  <%= link_to "Back to all the movies", movies_path %>
 </p>

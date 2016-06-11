@@ -14,7 +14,22 @@ class MoviesController < ApplicationController
 
   def create
     @movie = Movie.create(movie_params)
-    redirect_to movies_path
+    
+    if @movie.save
+      flash[:notice] = "Saved!"
+      redirect_to movies_path
+    else
+      flash.now[:error] = "There's an issue saving!"
+      render :new
+    end
+  end
+
+  def update
+    if @movie.update(movie_params)
+      redirect_to movies_path, notice: "Updated!"
+    else
+      flash.new[:error] = "There's an issue saving!"
+    end
   end
 
   def edit
@@ -32,6 +47,6 @@ class MoviesController < ApplicationController
   end
 
   def movie_params
-    params.require(:movie).permit(:title)
+    params.require(:movie).permit(:title, :format, :movie_format, :format_ids => [])
   end
 end
