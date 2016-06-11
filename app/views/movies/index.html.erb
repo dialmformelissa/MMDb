@@ -2,6 +2,6 @@
 
 <% @movies.each do | movie | %>
   <p>
-    <span><%= movie.title %> </span>
+    <span><%= link_to movie.title, movie_path(movie) %> </span>
   </p>
 <% end %>
