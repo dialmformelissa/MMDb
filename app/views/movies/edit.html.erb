@@ -2,4 +2,6 @@
 
 <%= render 'form' %>
 
-<%= link_to 'DELETE', movie_path(@movie), method: :delete, data:{confirm: 'Sure?'} %>
+<p>
+  <%= link_to 'DELETE', movie_path(@movie), method: :delete, data:{confirm: 'Sure?'} %>
+</p>
