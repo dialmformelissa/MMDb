@@ -1,3 +1,5 @@
-<h1>Edit <%= @movie %></h1>
+<h1>Edit <%= @movie.title %></h1>
 
-<%= render "form" %>
+<%= render 'form' %>
+
+<%= link_to 'DELETE', movie_path(@movie), method: :delete, data:{confirm: 'Sure?'} %>
