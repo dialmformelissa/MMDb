@@ -20,6 +20,11 @@
     <%= f.label :format %><br>
     <%= collection_check_boxes(:movie, :format_ids, Format.all, :id, :name) %>
   </p>
+  <p> 
+    <%= f.label :app %><br>
+    <%= collection_check_boxes(:movie, :app_ids, App.all, :id, :name) %>
+  </p>
+
   <%= f.submit %>
 
 <% end %>
