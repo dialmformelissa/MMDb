@@ -13,6 +13,12 @@
 </p>
 
 <p>
+  <% @movie.definitions.each do |definition| %>
+    <%= definition.name %>
+  <% end %>
+</p>
+
+<p>
   <%= link_to 'edit', edit_movie_path(@movie) %>
 </p>
 

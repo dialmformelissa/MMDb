@@ -25,6 +25,11 @@
     <%= collection_check_boxes(:movie, :app_ids, App.all, :id, :name) %>
   </p>
 
+    <p> 
+    <%= f.label :definitions %><br>
+    <%= collection_check_boxes(:movie, :definition_ids, Definition.all, :id, :name) %>
+  </p>
+
   <%= f.submit %>
 
 <% end %>

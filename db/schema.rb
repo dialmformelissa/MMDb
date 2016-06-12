@@ -11,11 +11,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160612160741) do
+ActiveRecord::Schema.define(version: 20160612175547) do
 
   create_table "apps", force: :cascade do |t|
     t.string   "name"
     t.boolean  "exclusive"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "definitions", force: :cascade do |t|
+    t.string   "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -37,6 +43,13 @@ ActiveRecord::Schema.define(version: 20160612160741) do
     t.integer  "app_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "movie_definitions", force: :cascade do |t|
+    t.integer  "movie_id"
+    t.integer  "definition_id"
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
   end
 
   create_table "movie_digital_formats", force: :cascade do |t|
