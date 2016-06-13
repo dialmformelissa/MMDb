@@ -1,9 +1,31 @@
-<h1>Movies</h1>
-
-<%= link_to "Add movie", new_movie_path %>
-
-<% @movies.each do | movie | %>
-  <p>
-    <span><%= link_to movie.title, movie_path(movie) %> </span>
-  </p>
-<% end %>
+<div class="row">
+  <div class="col-md-11">
+    <h2>My Movies</h2>
+    <span class="btn btn-default"><%= link_to "Add movie", new_movie_path %></span>
+  </div> 
+</div>
+<br>
+<table class="table">
+  <tbody>
+    <% @movies.each do |movie| %>
+    <tr>
+      <td><%= link_to movie.title, edit_movie_path(movie) %></td>
+      <td>
+        <% movie.formats.each do |format| %>
+          <%= format.name %><br>
+        <% end %> 
+      </td>
+      <td>
+        <% movie.apps.each do |app| %>
+        <%= app.name %><br>
+      <% end %>
+      </td>
+      <td>
+        <% movie.definitions.each do |definition| %>
+        <%= definition.name %>
+      <% end %>
+      </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
