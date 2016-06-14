@@ -17,7 +17,9 @@
   </p>
   <p> 
     <%= f.label :format %><br>
+    <div class="item_wrapper_tag">
     <%= collection_check_boxes(:movie, :format_ids, Format.all, :id, :name) %>
+    </div>
   </p>
   <p> 
     <%= f.label :app %><br>
@@ -30,4 +32,3 @@
   </p>
   <%= f.submit %>
 <% end %>
-<%= link_to "Back to all the movies", movies_path %>

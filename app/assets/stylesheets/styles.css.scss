@@ -15,7 +15,7 @@ ul {
   display: inline;
 }
 
-.col-md-3, .col-md-11 {
+.col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-8, .col-md-11, {
   float: none;
   margin: 0 auto;
 }
@@ -24,4 +24,13 @@ ul {
   width: 90%;
   float: none;
   margin: 0 auto;
+}
+
+.nobullet {
+  list-style: none;
+}
+
+.vast {
+  font-family: 'Vast Shadow', cursive;
+  display: inline;
 }

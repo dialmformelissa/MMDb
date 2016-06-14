@@ -1,11 +1,17 @@
 <div class="row">
   <div class="col-md-11">
-    <h2>My Movies</h2>
+    <h2>My Movie Database</h2>
     <span class="btn btn-default"><%= link_to "Add movie", new_movie_path %></span>
   </div> 
 </div>
 <br>
 <table class="table">
+  <thead>
+    <th>Title</th>
+    <th>Format</th>
+    <th>Streaming App</th>
+    <th>Definition</th>
+  </thead>
   <tbody>
     <% @movies.each do |movie| %>
     <tr>

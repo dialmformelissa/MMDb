@@ -3,7 +3,12 @@ class MoviesController < ApplicationController
   before_action :authenticate_user!
 
   def index
-    @movies = Movie.all
+    @movies = Movie.search(params[:query])
+    
+    respond_to do |format|
+      format.html
+      format.js
+    end
   end
 
   def show

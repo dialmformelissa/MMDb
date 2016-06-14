@@ -9,4 +9,9 @@ class Movie < ActiveRecord::Base
   has_many :definitions, through: :movie_definitions
 
   validates :title, presence: true, uniqueness: true
+
+  def self.search(term)
+    searchTerm = term
+    Movie.where("title LIKE ?", "%#{searchTerm}%")
+  end
 end

@@ -1,27 +1,32 @@
-<h1><%= @movie.title %></h1>
+<div class="row">
+  <div class="col-md-11">
 
-<p>
-  <% @movie.formats.each do |format| %>
-    <%= format.name %>
-  <% end %>
-</p>
+    <h1><%= @movie.title %></h1>
 
-<p>
-  <% @movie.apps.each do |app| %>
-    <%= app.name %>
-  <% end %>
-</p>
+    <p>
+      <% @movie.formats.each do |format| %>
+        <%= format.name %>
+      <% end %>
+    </p>
 
-<p>
-  <% @movie.definitions.each do |definition| %>
-    <%= definition.name %>
-  <% end %>
-</p>
+    <p>
+      <% @movie.apps.each do |app| %>
+        <%= app.name %>
+      <% end %>
+    </p>
 
-<p>
-  <%= link_to 'edit', edit_movie_path(@movie) %>
-</p>
+    <p>
+      <% @movie.definitions.each do |definition| %>
+        <%= definition.name %>
+      <% end %>
+    </p>
 
-<p>
-  <%= link_to "Back to all the movies", movies_path %>
-</p>
+    <p>
+      <%= link_to 'edit', edit_movie_path(@movie) %>
+    </p>
+
+    <p>
+      <%= link_to "Back to all the movies", movies_path %>
+    </p>
+  </div>
+</div>

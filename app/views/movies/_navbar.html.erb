@@ -9,16 +9,19 @@
         <span class="icon-bar"></span>
       </button>
       <a class="navbar-brand" href="/movies"><h2>MMDb</h2></a>
+      <ul class="nobullet">
+        <li><a href="/about">About</a></li>
+      </ul>
     </div>
 
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav navbar-left">
-        <li><a href="#">
+        <!-- <li><a href="#">
           <%= form_tag("/movies", method: :get, remote: true) do %>
             <%= text_field_tag(:query) %>
             <%= submit_tag(:search) %>
           <% end %></a>
-        </li>
+        </li> -->
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <li><% if current_user %>
