@@ -5,3 +5,6 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+Format.create([{ name: 'DVD'}, {name: 'Bluray'}, {name: 'Digital'}])
+App.create([{name: 'CinemaNow'}, {name: 'Vudu'}, {name: 'VHX'}, {name: 'Amazon'}, {name: 'iTunes'}, {name: 'Google Play'}, {name: 'Disney Movies Anywhere'}])
+Definition.create([{name: 'SD'}, {name: 'HD'}, {name: 'HDX'}])
