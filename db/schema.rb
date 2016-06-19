@@ -26,12 +26,6 @@ ActiveRecord::Schema.define(version: 20160612194210) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "digital_formats", force: :cascade do |t|
-    t.string   "name"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "formats", force: :cascade do |t|
     t.string   "name"
     t.datetime "created_at", null: false
@@ -50,13 +44,6 @@ ActiveRecord::Schema.define(version: 20160612194210) do
     t.integer  "definition_id"
     t.datetime "created_at",    null: false
     t.datetime "updated_at",    null: false
-  end
-
-  create_table "movie_digital_formats", force: :cascade do |t|
-    t.integer  "movie_id"
-    t.integer  "digital_format_id"
-    t.datetime "created_at",        null: false
-    t.datetime "updated_at",        null: false
   end
 
   create_table "movie_formats", force: :cascade do |t|
