@@ -16,7 +16,7 @@
     <%= f.text_field :title %>
   </p>
   <p> 
-    <%= f.label :format %><br>
+    <%= link_to (f.label :format), formats_path %> - <%= link_to "Add format", new_format_path %><br>
     <div class="item_wrapper_tag">
     <%= collection_check_boxes(:movie, :format_ids, Format.all, :id, :name) %>
     </div>

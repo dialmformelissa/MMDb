@@ -1,0 +1,13 @@
+<div class="row">
+  <div class="col-md-11">
+    <%= link_to "Back to all the formats", formats_path %>
+    <br>
+    <h2>Edit <%= @format.name %></h2>
+
+    <%= render 'form' %>
+    <br>
+    <p>
+      <%= link_to 'DELETE', format_path(@format), method: :delete, data:{confirm: 'Are you really, really sure?'} %>
+    </p>
+  </div>
+</div>

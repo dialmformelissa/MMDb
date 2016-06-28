@@ -1,0 +1,19 @@
+<%= form_for @format, html: { multipart: true} do |f| %>
+    <% if @format.errors.any? %>
+      <div class="alert alert-danger" role="alert">
+        <div id="error_explanation">
+          <p><%= pluralize(@format.errors.count, "error") %> prohibited this format from being saved:</p>
+          <ul>
+          <% @format.errors.full_messages.each do |message| %>
+            <li><%= message %></li>
+          <% end %>
+          </ul>
+        </div>
+      </div>
+      <% end %>
+  <p>
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </p>
+  <%= f.submit %>
+<% end %>

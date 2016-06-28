@@ -1,6 +1,10 @@
-<h1>Formats</h1>
-<% @formats.each do |format| %>
-  <p>
-    <span><%= format.name %></span>
-  </p>
-<% end %>
+<div class="row">
+  <div class="col-md-11">
+    <h2>Formats</h2>
+    <% @formats.each do |format| %>
+      <p>
+        <%= format.name %> - <%= link_to "Edit", edit_format_path(format) %>
+      </p>
+    <% end %>
+  </div>
+</div>
