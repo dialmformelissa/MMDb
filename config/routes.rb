@@ -1,11 +1,16 @@
 Rails.application.routes.draw do
   devise_for :users
   resources :movies
+  resources :formats
 
   root 'movies#index'
 
   controller :static_pages do
     get :about
+  end
+
+  controller :formats do
+    get :index
   end
   
   # The priority is based upon order of creation: first created -> highest priority.
