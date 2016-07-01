@@ -26,6 +26,7 @@ gem 'devise'
 gem 'bootstrap-sass', '~> 3.3.6'
 gem 'pg'
 gem 'heroku'
+gem 'rails_12factor'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
