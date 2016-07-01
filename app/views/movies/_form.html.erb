@@ -1,4 +1,4 @@
-<%= form_for @movie, html: { multipart: true} do |f| %>
+<%= simple_form_for @movie, html: { class: 'form-inline', multipart: true} do |f| %>
     <% if @movie.errors.any? %>
       <div class="alert alert-danger" role="alert">
         <div id="error_explanation">
@@ -11,24 +11,30 @@
         </div>
       </div>
       <% end %>
-  <p>
-    <%= f.label :title %><br>
-    <%= f.text_field :title %>
-  </p>
-  <p> 
-    <%= link_to (f.label :format), formats_path %> - <%= link_to "Add format", new_format_path %><br>
-    <div class="item_wrapper_tag">
-    <%= collection_check_boxes(:movie, :format_ids, Format.all, :id, :name) %>
-    </div>
-  </p>
-  <p> 
-    <%= f.label :app %><br>
-    <%= collection_check_boxes(:movie, :app_ids, App.all, :id, :name) %>
-  </p>
-
+  <div class="form-inputs">
+    <p>
+      <%= f.label :title %><br>
+      <%= f.text_field :title %>
+    </p>
     <p> 
-    <%= f.label :definitions %><br>
-    <%= collection_check_boxes(:movie, :definition_ids, Definition.all, :id, :name) %>
-  </p>
-  <%= f.submit %>
+      <%= link_to (f.label :format), formats_path %> - <%= link_to "Add format", new_format_path %><br>
+      <div class="item_wrapper_tag">
+      <%= collection_check_boxes(:movie, :format_ids, Format.all, :id, :name) %>
+      </div>
+    </p>
+    <p> 
+      <%= f.label :app %><br>
+      <%= collection_check_boxes(:movie, :app_ids, App.all, :id, :name) %>
+    </p>
+
+      <p> 
+      <%= f.label :definitions %><br>
+      <%= collection_check_boxes(:movie, :definition_ids, Definition.all, :id, :name) %>
+    </p>
+    <div class="form-actions">
+      <%= f.submit %>
+    </div>
+    
+  </div>
+  
 <% end %>
