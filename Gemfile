@@ -24,7 +24,6 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'simple_form', '~> 3.2', '>= 3.2.1'
 gem 'devise'
 gem 'bootstrap-sass', '~> 3.3.6'
-gem 'pg'
 gem 'heroku'
 gem 'rails_12factor'
 gem 'activerecord-jdbcpostgresql-adapter'
@@ -52,5 +51,10 @@ group :development do
 
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
+
+end
+
+group :production do
+  gem 'pg'
 end
 
